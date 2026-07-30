@@ -15,7 +15,7 @@
 
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="output.css" rel="stylesheet">
+
     <!-- Tailwind CSS with Custom ND Brand Configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -211,11 +211,13 @@
         class="relative h-screen w-full bg-hero-pattern bg-cover bg-center bg-no-repeat flex items-center justify-center text-center px-4">
         <div class="max-w-6xl mx-auto mt-20 flex flex-col items-center">
 
-            <!-- Main Title -->
-            <h1
-                class="reveal font-space font-black text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 uppercase leading-tight text-transparent bg-clip-text bg-gradient-to-r from-dome-gold to-metal-gold">
-                Notre Dame Rocketry Team
-            </h1>
+<!-- Keep the reveal animation and typography on the H1 -->
+<h1 class="reveal font-space font-black text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 uppercase leading-tight">
+    <!-- Move the gradient and transparency to a span, and add inline-block -->
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-dome-gold to-metal-gold inline-block">
+        Notre Dame Rocketry Team
+    </span>
+</h1>
 
             <!-- Mid-size Subtitle -->
             <p class="reveal delay-100 font-inter text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
