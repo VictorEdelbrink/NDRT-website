@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leadership | Notre Dame Rocketry Team</title>
+    <link rel="icon" type="image/png" href="patch@4x.png">
 
     <!-- Google Fonts: Orbitron for technical headings, Inter for clean body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,9 +109,9 @@ class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 flex jus
             class="absolute top-full left-0 mt-0 w-48 bg-deep-space/95 backdrop-blur-md border border-nd-blue rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden font-normal">
             <!-- Highlighted About Us dropdown item -->
             <a href="about us.html"
-                class="px-4 py-3 text-dome-gold bg-nd-blue/30 hover:bg-nd-blue transition-colors">About Us</a>
+                class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">About Us</a>
             <a href="leadership.html"
-                class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">Leadership</a>
+                class="px-4 py-3 text-dome-gold bg-nd-blue/30 hover:bg-nd-blue transition-colors">Leadership</a>
         </div>
     </div>
 
@@ -876,35 +877,8 @@ data-casual="">
         </div>
     </div>
 
-        <!-- Scroll to Top Button -->
-        <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 opacity-0 pointer-events-none transition-all duration-500 bg-nd-blue text-white hover:bg-dome-gold hover:text-deep-space px-5 py-3 rounded-lg shadow-lg flex items-center gap-2 font-space font-bold uppercase tracking-wider text-sm group">
-            <i class="fa-solid fa-arrow-up group-hover:-translate-y-1 transition-transform duration-300"></i>
-            <span>Top</span>
-        </button>
-    
-        <!-- Scroll to Top Script -->
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-                const scrollThreshold = 300; // Pixels to scroll before the button appears
-    
-                // Show or hide the button based on scroll position
-                window.addEventListener("scroll", () => {
-                    if (window.scrollY > scrollThreshold) {
-                        scrollToTopBtn.classList.remove("opacity-0", "pointer-events-none");
-                        scrollToTopBtn.classList.add("opacity-100", "pointer-events-auto");
-                    } else {
-                        scrollToTopBtn.classList.add("opacity-0", "pointer-events-none");
-                        scrollToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
-                    }
-                });
-    
-                // Smooth scroll back to the top when clicked
-                scrollToTopBtn.addEventListener("click", () => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                });
-            });
-        </script>
+    <script src="scroll_to_top_script.js"></script>
+
     
 
     <!-- Scroll Reveal Animation Script -->

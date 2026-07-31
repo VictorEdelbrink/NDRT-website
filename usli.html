@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA USLI | Notre Dame Rocketry Team</title>
-    
+    <link rel="icon" type="image/png" href="patch@4x.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
@@ -270,10 +271,10 @@ class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 flex jus
                 <p class="font-inter text-gray-300 text-lg leading-relaxed mb-8 font-light">
                     Following years of consistent growth, NDRT captured the **2024 USLI Overall National Championship**. The University Student Launch Initiative provides a unique opportunity for our students to learn both advanced aerospace concepts and the critical life skills that make them successful professional engineers.
                 </p>
-                <a href="coming soon.html" class="inline-flex items-center gap-3 px-6 py-3 bg-nd-blue hover:bg-dome-gold hover:text-deep-space text-white font-space font-bold tracking-widest uppercase rounded border border-dome-gold/40 transition-all duration-300">
+             <!--   <a href="coming soon.html" class="inline-flex items-center gap-3 px-6 py-3 bg-nd-blue hover:bg-dome-gold hover:text-deep-space text-white font-space font-bold tracking-widest uppercase rounded border border-dome-gold/40 transition-all duration-300">
                     <span>Read Championship History</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
+                </a>-->
             </div>
             <div class="reveal delay-100 lg:col-span-5 order-2">
                 <div class="relative rounded-lg overflow-hidden border border-nd-blue shadow-2xl group">
@@ -486,7 +487,7 @@ class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 flex jus
             <div class="lg:col-span-5 flex flex-col gap-8">
                 <!-- Squad Hero Image -->
                 <div class="relative w-full h-64 md:h-80 rounded-xl overflow-hidden border-2 border-nd-blue/40 shadow-2xl shadow-nd-blue/20">
-                    <img id="detail-hero-image" src="/path/to/placeholder.jpg" alt="Squad Action Shot" class="absolute inset-0 w-full h-full object-cover grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal transition-all duration-700">
+                    <img id="detail-hero-image" src="/path/to/placeholder.jpg" alt="Squad Action Shot" class="absolute inset-0 w-full h-full object-cover  transition-all duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-deep-space via-deep-space/20 to-transparent"></div>
                 </div>
 
@@ -564,7 +565,7 @@ class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 flex jus
                     The team is responsible for paying their learning experiences forward through different educational outreach events. We host workshops and rocket builds for local schools and community groups, serving the youth of the South Bend area to inspire the next generation of engineers.
                 </p>
                
-                <a href="coming soon.html" class="inline-flex items-center gap-3 px-6 py-3 bg-nd-blue hover:bg-dome-gold hover:text-deep-space text-white font-space font-bold tracking-widest uppercase rounded border border-dome-gold/40 transition-all duration-300">
+                <a href="outreach.html" class="inline-flex items-center gap-3 px-6 py-3 bg-nd-blue hover:bg-dome-gold hover:text-deep-space text-white font-space font-bold tracking-widest uppercase rounded border border-dome-gold/40 transition-all duration-300">
                     <span>View Community Operations</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
@@ -572,7 +573,7 @@ class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 flex jus
             
             <div class="reveal delay-100 lg:col-span-5 order-2">
                 <div class="relative rounded-lg overflow-hidden border border-nd-blue shadow-2xl group">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Team giving STEM demonstration to local students" class="w-full h-80 md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="img-4483.jpg" alt="Team giving STEM demonstration to local students" class="w-full h-80 md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-deep-space/80 via-transparent to-transparent"></div>
                 </div>
             </div>
@@ -774,34 +775,8 @@ class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 flex jus
         </div>
     </div>
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 opacity-0 pointer-events-none transition-all duration-500 bg-nd-blue text-white hover:bg-dome-gold hover:text-deep-space px-5 py-3 rounded-lg shadow-lg flex items-center gap-2 font-space font-bold uppercase tracking-wider text-sm group">
-        <i class="fa-solid fa-arrow-up group-hover:-translate-y-1 transition-transform duration-300"></i>
-        <span>Top</span>
-    </button>
+    <script src="scroll_to_top_script.js"></script>
 
-    <!-- Scroll to Top Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-            const scrollThreshold = 300; // Pixels to scroll before the button appears
-
-            // Show or hide the button based on scroll position
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > scrollThreshold) {
-                    scrollToTopBtn.classList.remove("opacity-0", "pointer-events-none");
-                    scrollToTopBtn.classList.add("opacity-100", "pointer-events-auto");
-                } else {
-                    scrollToTopBtn.classList.add("opacity-0", "pointer-events-none");
-                    scrollToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
-                }
-            });
-
-            // Smooth scroll back to the top when clicked
-            scrollToTopBtn.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        });
-    </script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // Modal Elements
@@ -935,7 +910,7 @@ document.addEventListener('DOMContentLoaded', () => {
         vehicles: {
             title: "Vehicles",
             icon: "fa-space-shuttle transform -rotate-45",
-            heroImage: "assets/images/vehicles-hero.jpg", 
+            heroImage: "ndrt7.jpg", 
             desc1: "The Vehicles squad is responsible for the design and manufacturing of the exterior of the rocket. This includes the body tubes, fins, and nose cone.",
             desc2: "Beyond physical manufacturing, the squad also runs complex aerodynamic simulations to estimate the final altitude, speed, stability, and overall flight performance of the rocket prior to launch.",
             deliverables: [
@@ -947,7 +922,7 @@ document.addEventListener('DOMContentLoaded', () => {
             lead: {
                 name: "Dalton Leitz",
                 major: "Junior, Aerospace Engineering",
-                image: "assets/images/leads/dalton.jpg", // Update with local file name
+                image: "1x1 aspect ratio pro photo - Dalton Leitz.JPG", // Update with local file name
                 email: "mailto:dleitz@nd.edu",
                 linkedin: "https://linkedin.com/"
             }
@@ -955,7 +930,7 @@ document.addEventListener('DOMContentLoaded', () => {
         recovery: {
             title: "Recovery",
             icon: "fa-parachute-box",
-            heroImage: "assets/images/recovery-hero.jpg",
+            heroImage: "ndrt5.jpg",
             desc1: "Recovery ensures the safe landing of the rocket. This is done with two distinct modules that deploy parachutes.",
             desc2: "Using advanced sensors and ejection charges, the squad separates the launch vehicle at specific points in its descent. The design must meet strict NASA requirements for drift radius and kinetic energy upon landing.",
             deliverables: [
@@ -965,17 +940,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Kinetic energy limit compliance"
             ],
             lead: {
-                name: "Sarah Jenkins", // Placeholder (Not in roster provided)
+                name: "Saitta Roy", // Placeholder (Not in roster provided)
                 major: "Junior, Mechanical Engineering",
-                image: "assets/images/leads/sarah.jpg",
-                email: "mailto:sarah@nd.edu",
+                image: "headshot - Saitta Roy.jpeg",
+                email: "mailto:sroy3@nd.edu",
                 linkedin: "https://linkedin.com/"
             }
         },
         payload: {
             title: "Payload",
             icon: "fa-satellite",
-            heroImage: "assets/images/payload-hero.jpg",
+            heroImage: "ndrt1.png",
             desc1: "Each year, this squad is responsible for the design we use for the annual NASA Payload Design Challenge, which changes yearly to expose students to different sciences.",
             desc2: "The three most recent challenges engineered by this squad have been a self-piloting helicopter that ejects mid-flight, a radio transmitter extending from the body, and a device capable of collecting soil samples upon landing.",
             deliverables: [
@@ -987,7 +962,7 @@ document.addEventListener('DOMContentLoaded', () => {
             lead: {
                 name: "Noah Janchar",
                 major: "Senior, Mechanical Engineering",
-                image: "assets/images/leads/noah.jpg",
+                image: "IMG_2876 - Noah Janchar.jpeg    ",
                 email: "mailto:Njanchar@nd.edu",
                 linkedin: "https://linkedin.com/"
             }
@@ -995,7 +970,7 @@ document.addEventListener('DOMContentLoaded', () => {
         acs: {
             title: "Apogee Control",
             icon: "fa-compress-arrows-alt",
-            heroImage: "assets/images/acs-hero.jpg",
+            heroImage: "acs.jpeg",
             desc1: "ACS designs a secondary non-scoring payload that is responsible for reaching an exact, predetermined apogee for the rocket.",
             desc2: "Ensuring the launch vehicle will naturally overshoot the target apogee, ACS designs a mechanical system that extends drag flaps to slow down the rocket mid-flight, calculated in real-time based on data from an onboard IMU and altimeter.",
             deliverables: [
@@ -1007,7 +982,7 @@ document.addEventListener('DOMContentLoaded', () => {
             lead: {
                 name: "Jenna Pucciani",
                 major: "Junior, Aerospace Engineering",
-                image: "assets/images/leads/jenna.jpg",
+                image: "jenna_formal_photo - Jenna Pucciani.jpg",
                 email: "mailto:jpuccian@nd.edu",
                 linkedin: "https://linkedin.com/"
             }
@@ -1015,7 +990,7 @@ document.addEventListener('DOMContentLoaded', () => {
         systems: {
             title: "Systems",
             icon: "fa-network-wired",
-            heroImage: "assets/images/systems-hero.jpg",
+            heroImage: "IMG_5267.png",
             desc1: "The Systems Squad is responsible for outlining requirements for the team that must be subsequently verified or tested to ensure strict compliance.",
             desc2: "For example, they oversee the subscale launch vehicle testing in a wind tunnel to accurately determine the drag coefficients and center of pressure, ensuring our real-world tests match our dynamic modeling.",
             deliverables: [
@@ -1025,17 +1000,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Drag coefficient and CP calculations"
             ],
             lead: {
-                name: "David Kim", // Placeholder (Not in roster provided)
-                major: "Senior, Systems Engineering",
-                image: "assets/images/leads/david.jpg",
-                email: "mailto:david@nd.edu",
+                name: "Aidan Flynn",
+                major: "Senior, Aerospace Engineering",
+                image: "Aidan_Flynn_Headshot - Aidan Flynn.jpg",
+                email: "mailto:aflynn4@nd.edu",
                 linkedin: "https://linkedin.com/"
             }
         },
         electrical: {
             title: "Electrical",
             icon: "fa-microchip",
-            heroImage: "electrical.png",
+            heroImage: "ndrt3.png",
             desc1: "The electrical design squad engineers the complex electrical systems required so that all the different vehicular modules work as intended.",
             desc2: "This includes designing custom Printed Circuit Boards (PCB) to integrate sensors and actuators for the embedded systems, as well as writing all necessary code so that the modules operate efficiently and flawlessly.",
             deliverables: [
@@ -1055,7 +1030,7 @@ document.addEventListener('DOMContentLoaded', () => {
         safety: {
             title: "Safety",
             icon: "fa-shield-halved",
-            heroImage: "safety.jpeg",
+            heroImage: "ndrt6.jpg",
             desc1: "The safety squad works to strictly identify and mitigate all potential risks to personnel, property, and the environment.",
             desc2: "They are present and authoritative during all rocket construction, transportation, and launch procedures to maintain compliance with all application regulations and secure our consecutive National Safety Awards.",
             deliverables: [
@@ -1067,7 +1042,7 @@ document.addEventListener('DOMContentLoaded', () => {
             lead: {
                 name: "Lainie Wilkins",
                 major: "Sophomore, Mechanical Engineering",
-                image: "assets/images/leads/lainie.jpg",
+                image: "IMG_5908 - Lainie Wilkins.jpeg",
                 email: "mailto:lwilkin2@nd.edu",
                 linkedin: "https://linkedin.com/"
             }

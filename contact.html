@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Notre Dame Rocketry Team</title>
-    
+    <link rel="icon" type="image/png" href="patch@4x.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
@@ -99,7 +100,7 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-8 px-6 md:px-12 flex justify-between items-center">
         <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-            <img id="nav-logo" src="NDRT logo.png" alt="NDRT Logo" class="h-16 w-auto drop-shadow-md transition-all duration-300">
+            <img id="nav-logo" src="NDRT logo white.png" alt="NDRT Logo" class="h-16 w-auto drop-shadow-md transition-all duration-300">
         </div>
 
         <!-- Desktop Menu -->
@@ -112,9 +113,8 @@
                     ABOUT <i class="fa-solid fa-chevron-down text-xs"></i>
                 </button>
                 <div class="absolute top-full left-0 mt-0 w-48 bg-deep-space/95 backdrop-blur-md border border-nd-blue rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden font-normal">
-                    <a href="about.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">About Us</a>
+                    <a href="about us.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">About Us</a>
                     <a href="leadership.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">Leadership</a>
-                    <a href="contact.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">Contact Us</a>
                 </div>
             </div>
 
@@ -124,15 +124,15 @@
                     PROJECTS <i class="fa-solid fa-chevron-down text-xs"></i>
                 </button>
                 <div class="absolute top-full left-0 mt-0 w-52 bg-deep-space/95 backdrop-blur-md border border-nd-blue rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col overflow-hidden font-normal">
-                    <a href="projects.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">USLI</a>
+                    <a href="usli.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">USLI</a>
                     <a href="ndxp.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">NDXP</a>
-                    <a href="usli.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">OUTREACH</a>
+                    <a href="outreach.html" class="px-4 py-3 text-white hover:bg-nd-blue hover:text-dome-gold transition-colors">OUTREACH</a>
                 </div>
             </div>
 
-            <a href="community.html" class="text-white hover:text-dome-gold transition-colors duration-300">JOIN US</a>
-            <a href="join.html" class="text-dome-gold hover:text-white transition-colors duration-300">CONTACT</a>
-            <a href="sponsorship.html" class="px-5 py-2 border border-dome-gold text-dome-gold rounded-md hover:bg-dome-gold hover:text-deep-space transition-all duration-300">SPONSORS</a>
+            <a href="join us.html" class="text-white hover:text-dome-gold transition-colors duration-300">JOIN US</a>
+            <a href="contact.html" class="text-dome-gold hover:text-white transition-colors duration-300">CONTACT</a>
+            <a href="sponsors.html" class="px-5 py-2 border border-dome-gold text-dome-gold rounded-md hover:bg-dome-gold hover:text-deep-space transition-all duration-300">SPONSORS</a>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -146,7 +146,7 @@
         <a href="index.html" class="text-white hover:text-dome-gold mobile-link">Home</a>
         
         <div class="w-12 h-px bg-nd-blue my-2"></div>
-        <a href="about.html" class="text-white hover:text-dome-gold mobile-link">About Us</a>
+        <a href="about us.html" class="text-white hover:text-dome-gold mobile-link">About Us</a>
         <a href="leadership.html" class="text-white hover:text-dome-gold mobile-link">Leadership</a>
         <a href="contact.html" class="text-white hover:text-dome-gold mobile-link">Contact Us</a>
         
@@ -504,34 +504,8 @@
         </div>
     </div>
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 z-50 opacity-0 pointer-events-none transition-all duration-500 bg-nd-blue text-white hover:bg-dome-gold hover:text-deep-space px-5 py-3 rounded-lg shadow-lg flex items-center gap-2 font-space font-bold uppercase tracking-wider text-sm group">
-        <i class="fa-solid fa-arrow-up group-hover:-translate-y-1 transition-transform duration-300"></i>
-        <span>Top</span>
-    </button>
+    <script src="scroll_to_top_script.js"></script>
 
-    <!-- Scroll to Top Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-            const scrollThreshold = 300; // Pixels to scroll before the button appears
-
-            // Show or hide the button based on scroll position
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > scrollThreshold) {
-                    scrollToTopBtn.classList.remove("opacity-0", "pointer-events-none");
-                    scrollToTopBtn.classList.add("opacity-100", "pointer-events-auto");
-                } else {
-                    scrollToTopBtn.classList.add("opacity-0", "pointer-events-none");
-                    scrollToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
-                }
-            });
-
-            // Smooth scroll back to the top when clicked
-            scrollToTopBtn.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        });
-    </script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // Modal Elements
