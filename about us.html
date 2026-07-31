@@ -211,16 +211,15 @@ html {
 
 <!-- Page Header (Matches USLI Style) -->
 <!-- bg-about-hero uses the new gradient with your image -->
-<header class="relative pt-40 pb-32 w-full bg-about-hero bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
-    <div class="max-w-4xl mt-12">
-        <!-- Slightly smaller text (4xl md:6xl) to accommodate the longer "Our Mission & Story" title -->
-        <h1 class="reveal delay-100 font-space font-black text-4xl md:text-6xl tracking-tight text-white mb-4 uppercase">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-dome-gold to-metal-gold">Our Mission & Story</span>
+<header class="relative min-h-screen w-full bg-about-hero bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-deep-space/40"></div>
+    
+    <div class="max-w-4xl relative z-10">
+        <h1 class="reveal delay-100 font-space font-black text-5xl md:text-6xl tracking-tight text-white mb-6 uppercase">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-dome-gold to-metal-gold">Our Mission</span> & Story
         </h1>
-        <p class="reveal delay-200 font-space text-lg text-gray-300 mb-6 tracking-widest uppercase">
-            Notre Dame Rocketry Team
-        </p>
-        <p class="reveal delay-300 font-inter text-lg text-gray-400 max-w-2xl mx-auto font-light mb-10">
+        <p class="reveal delay-200 font-inter text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
             Engineering excellence, hands-on experience, and pushing the boundaries of collegiate aerospace.
         </p>
     </div>
