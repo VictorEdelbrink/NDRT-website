@@ -32,6 +32,7 @@
                     },
                     backgroundImage: {
                         'outreach-hero': "url('IMG_1063.jpeg')",
+                        'outreach-hero-mobile': "url('outreach12.png')", /* ADD YOUR MOBILE IMAGE HERE */
                         'blueprint-pattern': "linear-gradient(to right, rgba(5, 9, 20, 0.95), rgba(12, 35, 64, 0.9)), url('https://www.transparenttextures.com/patterns/blueprint.png')"
                     }
                 }
@@ -174,8 +175,10 @@
 
 
     <!-- Hero Header -->
+    <!-- Hero Header -->
     <header
-        class="relative min-h-screen w-full bg-outreach-hero bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
+        class="relative min-h-screen w-full bg-outreach-hero-mobile md:bg-outreach-hero bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
+
         <!-- The scrolling dark bottom-fade -->
         <div class="absolute inset-0 z-0 pointer-events-none"
             style="background: linear-gradient(to bottom, rgba(5, 9, 20, 0.2) 0%, rgba(5, 9, 20, 0.2) 70%, rgba(5, 9, 20, 1) 100%);">
@@ -849,7 +852,7 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        
+
     </script>
 
 </body>
