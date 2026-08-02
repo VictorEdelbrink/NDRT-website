@@ -70,9 +70,23 @@
             transform: translateY(0);
         }
         
+        .delay-75 { transition-delay: 75ms; }
         .delay-100 { transition-delay: 100ms; }
+        .delay-150 { transition-delay: 150ms; }
         .delay-200 { transition-delay: 200ms; }
+        .delay-225 { transition-delay: 225ms; }
         .delay-300 { transition-delay: 300ms; }
+
+        /* Cinematic Tint Reveal for the 40% overlay */
+@keyframes fade-in-tint {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .reveal-tint {
+            opacity: 0;
+            animation: fade-in-tint 1.5s ease-in-out forwards;
+            animation-delay: 0.3s; /* Waits a split second before fading in */
+        }
 
         .glow-gold { box-shadow: 0 0 25px rgba(201, 151, 0, 0.3); }
         .glow-platinum { box-shadow: 0 0 20px rgba(229, 228, 226, 0.2); }
@@ -672,6 +686,8 @@
 
         <!-- Scroll to Top Button -->
         <script src="scroll_to_top_script.js"></script>
+        <script src="ParallaxEffect.js"></script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {

@@ -27,7 +27,7 @@
                         'inter': ['Inter', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'contact-hero': "linear-gradient(to bottom, rgba(5, 9, 20, 0.7), rgba(5, 9, 20, 1)), url('https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2070&auto=format&fit=crop')",
+                        'contact-hero': "url('img_0159.jpg')",
                         'grid-pattern': "linear-gradient(to right, rgba(5, 9, 20, 0.95), rgba(12, 35, 64, 0.9)), url('https://www.transparenttextures.com/patterns/carbon-fibre.png')"
                     }
                 }
@@ -66,9 +66,23 @@
             transform: translateY(0);
         }
         
+        .delay-75 { transition-delay: 75ms; }
         .delay-100 { transition-delay: 100ms; }
+        .delay-150 { transition-delay: 150ms; }
         .delay-200 { transition-delay: 200ms; }
+        .delay-225 { transition-delay: 225ms; }
         .delay-300 { transition-delay: 300ms; }
+
+        /* Cinematic Tint Reveal for the 40% overlay */
+@keyframes fade-in-tint {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .reveal-tint {
+            opacity: 0;
+            animation: fade-in-tint 1.5s ease-in-out forwards;
+            animation-delay: 0.3s; /* Waits a split second before fading in */
+        }
 
         /* Form Input Styling */
         input:focus, textarea:focus, select:focus {
@@ -165,8 +179,15 @@
         <a href="sponsorship.html" class="mt-4 px-6 py-3 border border-dome-gold text-dome-gold rounded-md mobile-link">Sponsorship</a>
     </div>
 
-    <header class="relative min-h-screen w-full bg-contact-hero bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
-        <div class="max-w-4xl relative z-10">
+    <header class="relative min-h-screen w-full bg-contact-hero bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
+        <!-- 1. The scrolling dark bottom-fade -->
+        <div class="absolute inset-0 z-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(5, 9, 20, 0.2) 0%, rgba(5, 9, 20, 0.2) 70%, rgba(5, 9, 20, 1) 100%);"></div>
+        
+        <!-- 2. The animated dark overlay for text readability -->
+        <div class="absolute inset-0 bg-deep-space/40 reveal-tint z-0 pointer-events-none"></div>
+        
+        <!-- 3. Text wrapper with parallax ID -->
+        <div id="hero-text" class="max-w-4xl relative z-10 will-change-transform">
             <h1 class="reveal delay-100 font-space font-black text-5xl md:text-6xl tracking-tight text-white mb-6 uppercase">
                 Contact <span class="text-transparent bg-clip-text bg-gradient-to-r from-dome-gold to-metal-gold">us</span>
             </h1>
@@ -506,6 +527,8 @@
     </div>
     <!-- Scroll to Top Button -->
     <script src="scroll_to_top_script.js"></script>
+    <script src="ParallaxEffect.js"></script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {

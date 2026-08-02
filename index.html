@@ -14,9 +14,9 @@
 
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Tailwind CSS with Custom ND Brand Configuration -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -79,8 +79,11 @@
             transform: translateY(0);
         }
 
+        .delay-75 { transition-delay: 75ms; }
         .delay-100 { transition-delay: 100ms; }
+        .delay-150 { transition-delay: 150ms; }
         .delay-200 { transition-delay: 200ms; }
+        .delay-225 { transition-delay: 225ms; }
         .delay-300 { transition-delay: 300ms; }
 
         /* Infinite Ticker Animation */
@@ -107,12 +110,9 @@
         html {
     font-size: 80%; /* Scales down the entire Tailwind framework to your target 80% reference system */
 }
-    /* Forces exactly 16px as the base for 1rem, regardless of Chrome's weird profile scaling */
-
-/*html {
-    font-size: 16px !important; 
-}*/
     </style>
+
+
 </head>
 
 <body class="font-inter antialiased selection:bg-dome-gold selection:text-deep-space">

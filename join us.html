@@ -32,7 +32,7 @@
                         'inter': ['Inter', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(5, 9, 20, 0.7), rgba(5, 9, 20, 1)), url('IMG_1558.JPG')",
+                        'hero-pattern': "url('IMG_7540.PNG')",
                     }
                 }
             }
@@ -63,9 +63,23 @@
             transform: translateY(0);
         }
         
+        .delay-75 { transition-delay: 75ms; }
         .delay-100 { transition-delay: 100ms; }
+        .delay-150 { transition-delay: 150ms; }
         .delay-200 { transition-delay: 200ms; }
+        .delay-225 { transition-delay: 225ms; }
         .delay-300 { transition-delay: 300ms; }
+
+        /* Cinematic Tint Reveal for the 40% overlay */
+@keyframes fade-in-tint {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .reveal-tint {
+            opacity: 0;
+            animation: fade-in-tint 1.5s ease-in-out forwards;
+            animation-delay: 0.3s; /* Waits a split second before fading in */
+        }
 
         html {
     font-size: 80%; /* Scales down the entire Tailwind framework to your target 80% reference system */
@@ -153,18 +167,23 @@ class="fixed inset-0 bg-deep-space/95 backdrop-blur-md z-40 hidden flex-col item
 <a href="sponsorship.html"
     class="mt-4 px-6 py-3 border border-dome-gold text-dome-gold rounded-md mobile-link">Sponsorship</a>
 </div>
-
-    <!-- Hero Section -->
-    <header class="relative min-h-screen w-full bg-hero-pattern bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
-        <div class="max-w-4xl relative z-10">
-            <h1 class="reveal delay-100 font-space font-black text-5xl md:text-6xl tracking-tight text-white mb-6 uppercase">
-                JOIN THE <span class="text-transparent bg-clip-text bg-gradient-to-r from-dome-gold to-metal-gold">TEAM</span>
-            </h1>
-            <p class="reveal delay-200 font-inter text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
-                Are you a student looking to get involved with our work? NDRT is entirely student-led, designing, building, and launching some of the most advanced undergraduate projects in the country.
-            </p>
-        </div>
-    </header>
+<!-- Hero Section -->
+<header class="relative min-h-screen w-full bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden flex flex-col items-center justify-center text-center px-4 border-b border-nd-blue">
+    <!-- The scrolling dark bottom-fade -->
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background: linear-gradient(to bottom, rgba(5, 9, 20, 0.2) 0%, rgba(5, 9, 20, 0.2) 70%, rgba(5, 9, 20, 1) 100%);"></div>
+    
+    <div class="absolute inset-0 bg-deep-space/40 reveal-tint z-0 pointer-events-none"></div>
+    
+    <!-- Text wrapper with parallax ID -->
+    <div id="hero-text" class="max-w-4xl relative z-10 will-change-transform">
+        <h1 class="reveal delay-100 font-space font-black text-5xl md:text-6xl tracking-tight text-white mb-6 uppercase">
+            JOIN THE <span class="text-transparent bg-clip-text bg-gradient-to-r from-dome-gold to-metal-gold">TEAM</span>
+        </h1>
+        <p class="reveal delay-200 font-inter text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
+            Are you a student looking to get involved with our work? NDRT is entirely student-led, designing, building, and launching some of the most advanced undergraduate projects in the country.
+        </p>
+    </div>
+</header>
     <!-- Why Join / Core Philosophy -->
     <section class="py-20 bg-deep-space relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -484,6 +503,8 @@ class="fixed inset-0 bg-deep-space/95 backdrop-blur-md z-40 hidden flex-col item
 
     <!-- Scroll to Top Button -->
         <script src="scroll_to_top_script.js"></script>
+        <script src="ParallaxEffect.js"></script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
